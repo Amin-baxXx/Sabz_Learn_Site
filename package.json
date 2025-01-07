@@ -1,0 +1,23 @@
+{
+  "name": "project-takhatsosi-big-project-sabzlearn",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000a\u0000b\u0000z\u0000_\u0000L\u0000e\u0000a\u0000r\u0000n\u0000_\u0000S\u0000i\u0000t\u0000e\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amin-baxXx/Sabz_Learn_Site.git"
+  },
+  "author": "Amin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Amin-baxXx/Sabz_Learn_Site/issues"
+  },
+  "homepage": "https://github.com/Amin-baxXx/Sabz_Learn_Site#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
+    "bootstrap": "^5.3.3"
+  }
+}

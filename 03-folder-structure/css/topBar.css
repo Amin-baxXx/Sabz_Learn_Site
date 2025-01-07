@@ -1,0 +1,53 @@
+/* Header*/
+.header {
+}
+.header__top-bar {
+  background: #e7edf4;
+  padding: 2rem 0;
+}
+.header__container {
+}
+.top-bar__content {
+  display: flex;
+  justify-content: space-between;
+  /*align-items: center;*/
+  padding: 0 1.5rem;
+}
+.top-bar__right {
+}
+.top-bar__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar__item {
+  font-size: 1.5rem;
+}
+.top-bar__link {
+}
+.top-bar__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.top-bar__email {
+}
+.top-bar__email-text {
+}
+.top-bar__link {
+  padding: 0 1.5rem;
+}
+.top-bar__email--icon {
+  color: var(--primary-color);
+}
+.top-bar__phone {
+}
+.top-bar__phone-text {
+}
+.top-bar__link {
+}
+.top-bar__phone--icon {
+  color: var(--primary-color);
+}
+/*End of tap Bar */

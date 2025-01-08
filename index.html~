@@ -68,19 +68,19 @@
           <div class="main-header__content">
             <div class="main-header__right">
               <img
-                src="./folder-structure/images/logo/Logo.png"
+                src="./folder-structure/images/logo/Logo.svg"
                 alt="Logo Sabzi"
                 class="main-header__logo"
               />
-            </div>
-            <ul class="main-header__menu">
-              <li class="main-header__item">
-                <a href="#" class="main-header__link">صفحه اصلی</a>
-              </li>
-              <li class="main-header__item">
-                <a href="#" class="main-header__link">
-                  فرانت اند
-                  <ul class="main-header__dropdown">
+              <ul class="main-header__menu">
+                <li class="main-header__item">
+                  <a href="#" class="main-header__link">صفحه اصلی</a>
+                </li>
+                <li class="main-header__item">
+                  <span class="arrow"></span>
+
+                  <a href="#" class="main-header__link"> فرانت اند </a>
+                  <ul class="main-header__dropdown show">
                     <li class="main-header__dropdown-item">
                       <a href="#" class="main-header__dropdown-link">Html</a>
                     </li>
@@ -104,11 +104,11 @@
                       <a href="#" class="main-header__dropdown-link">ریکت</a>
                     </li>
                   </ul>
-                </a>
-              </li>
-              <li class="main-header__item">
-                <a href="#" class="main-header__link"
-                  >امنیت
+                </li>
+                <li class="main-header__item">
+                  <span class="arrow"></span>
+
+                  <a href="#" class="main-header__link">امنیت </a>
                   <ul class="main-header__dropdown">
                     <li class="main-header__dropdown-item">
                       <a href="#" class="main-header__dropdown-link"
@@ -131,11 +131,10 @@
                       <a href="#" class="main-header__dropdown-link">ریکت</a>
                     </li>
                   </ul>
-                </a>
-              </li>
-              <li class="main-header__item">
-                <a href="#" class="main-header__link"
-                  >مقالات
+                </li>
+                <li class="main-header__item">
+                  <span class="arrow"></span>
+                  <a href="#" class="main-header__link">مقالات </a>
                   <ul class="main-header__dropdown">
                     <li class="main-header__dropdown-item">
                       <a href="#" class="main-header__dropdown-link"
@@ -154,15 +153,15 @@
                     </li>
                     <li class="main-header__dropdown-item">
                       <a href="#" class="main-header__dropdown-link"
-                        >علم دادا</a
+                        >علم داده</a
                       >
                     </li>
                   </ul>
-                </a>
-              </li>
-              <li class="main-header__item">
-                <a href="#" class="main-header__link"
-                  >پایتون
+                </li>
+                <li class="main-header__item">
+                  <span class="arrow"></span>
+
+                  <a href="#" class="main-header__link">پایتون </a>
                   <ul class="main-header__dropdown">
                     <li class="main-header__dropdown-item">
                       <a href="#" class="main-header__dropdown-link"
@@ -170,8 +169,8 @@
                       >
                     </li>
                     <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link"
-                        >آموزش پایتون
+                      <a href="#" class="main-header__dropdown-link">
+                        آموزش پایتون
                       </a>
                     </li>
                     <li class="main-header__dropdown-item">
@@ -180,38 +179,12 @@
                       >
                     </li>
                   </ul>
-                </a>
-              </li>
-              <li class="main-header__item">
-                <a href="#" class="main-header__link"
-                  >مهارت های نرم
-                  <ul class="main-header__dropdown">
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">Html</a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">Css</a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link"
-                        >Bootstrap</a
-                      >
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link"
-                        >جاوااسکریپت</a
-                      >
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">پایتون</a>
-                    </li>
-                    <li class="main-header__dropdown-item">
-                      <a href="#" class="main-header__dropdown-link">ریکت</a>
-                    </li>
-                  </ul>
-                </a>
-              </li>
-            </ul>
+                </li>
+                <li class="main-header__item">
+                  <a href="#" class="main-header__link">مهارت های نرم </a>
+                </li>
+              </ul>
+            </div>
             <div class="main-header__left">
               <a href="#" class="main-header__search-btn">
                 <i class="fas fa-search main-header__search-icon"></i>

@@ -3,14 +3,14 @@
 }
 .header__top-bar {
   background: #e7edf4;
-  padding: 2rem 0;
+  padding: 1.2rem 0;
 }
 .header__container {
 }
 .top-bar__content {
   display: flex;
   justify-content: space-between;
-  /*align-items: center;*/
+  align-items: center;
   padding: 0 1.5rem;
 }
 .top-bar__right {
@@ -24,6 +24,7 @@
   font-size: 1.5rem;
 }
 .top-bar__link {
+  transition: color 200ms ease;
 }
 .top-bar__left {
   display: flex;

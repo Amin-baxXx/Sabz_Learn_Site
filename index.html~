@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="folder-structure/css/reset.css" />
     <!-- Main-css -->
     <link rel="stylesheet" href="folder-structure/css/index.css" />
-
   </head>
   <body>
     <header class="header">
@@ -63,12 +62,178 @@
           </div>
         </div>
       </div>
+      <!--        -->
+      <div class="main-header">
+        <div class="container-fluid">
+          <div class="main-header__content">
+            <div class="main-header__right">
+              <img
+                src="./folder-structure/images/logo/Logo.png"
+                alt="Logo Sabzi"
+                class="main-header__logo"
+              />
+            </div>
+            <ul class="main-header__menu">
+              <li class="main-header__item">
+                <a href="#" class="main-header__link">صفحه اصلی</a>
+              </li>
+              <li class="main-header__item">
+                <a href="#" class="main-header__link">
+                  فرانت اند
+                  <ul class="main-header__dropdown">
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">Html</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">Css</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >Bootstrap</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >جاوااسکریپت</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">پایتون</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">ریکت</a>
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a href="#" class="main-header__link"
+                  >امنیت
+                  <ul class="main-header__dropdown">
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >هک امنیت</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">هاکر</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">devOps</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">لینوکس</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">پایتون</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">ریکت</a>
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a href="#" class="main-header__link"
+                  >مقالات
+                  <ul class="main-header__dropdown">
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >فرانت اند</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >توسعه وب</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >هوش مصنوعی</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >علم دادا</a
+                      >
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a href="#" class="main-header__link"
+                  >پایتون
+                  <ul class="main-header__dropdown">
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >پایتون سیاه</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >آموزش پایتون
+                      </a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >هوش مصنوعی با پایتون</a
+                      >
+                    </li>
+                  </ul>
+                </a>
+              </li>
+              <li class="main-header__item">
+                <a href="#" class="main-header__link"
+                  >مهارت های نرم
+                  <ul class="main-header__dropdown">
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">Html</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">Css</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >Bootstrap</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link"
+                        >جاوااسکریپت</a
+                      >
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">پایتون</a>
+                    </li>
+                    <li class="main-header__dropdown-item">
+                      <a href="#" class="main-header__dropdown-link">ریکت</a>
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
+            <div class="main-header__left">
+              <a href="#" class="main-header__search-btn">
+                <i class="fas fa-search main-header__search-icon"></i>
+              </a>
+              <a href="#" class="main-header__cart-btn">
+                <i class="fas fa-shopping-cart main-header__cart-icon"></i>
+              </a>
+              <a href="#" class="main-header__profile">
+                <span class="main-header__profile-text"
+                  >سید امین موحدی راد</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!--Scripts  Files 🫂🥰-->
     <!-- Font-awesome -->
-    <script src="../node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
     <!-- Bootstrap   -->
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

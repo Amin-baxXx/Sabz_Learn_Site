@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>سبزلرن | صفحه اصلی</title>
+    <title>زردلرن | صفحه اصلی</title>
     <!-- Bootstrap   -->
     <link
       rel="stylesheet"
@@ -209,7 +209,7 @@
           ما به هر قیمتی دوره آموزشی تولید نمیکنیم !
         </h1>
         <h2 class="landing__subtitle">
-          با آکادمی سبزلرن برنامه نویسی رو با خیال راحت یادبگیر و پیشرفت کن
+          با آکادمی زردلرن برنامه نویسی رو با خیال راحت یادبگیر و پیشرفت کن
         </h2>
         <div class="landing__searchbar">
           <input
@@ -344,5 +344,5 @@
     <!-- Bootstrap   -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-  <!--Test-->
+  <!--Testing-->
 </html>

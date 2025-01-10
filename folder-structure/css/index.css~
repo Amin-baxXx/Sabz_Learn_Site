@@ -197,7 +197,7 @@ svg {
   padding-top: 6rem;
   text-align: center;
   font-size: 4rem;
-  word-spacing: 1rem;
+  word-spacing: rem;
 }
 .landing__subtitle {
   text-align: center;
@@ -206,17 +206,18 @@ svg {
   font-size: 1.8rem;
 }
 .section {
-  background-image: url("../images/backGround/background_landing.jfif");
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../images/backGround/background_landing.jfif"),
+    no-repeat center;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 52rem;
+  height: 51rem;
 }
 .landing__searchbar {
   text-align: center;
   margin: 3rem auto;
   background: var(--white-color);
-  width: 90rem;
+  width: 80rem;
   padding: 0.5rem 1rem;
   display: flex;
   justify-content: space-between;

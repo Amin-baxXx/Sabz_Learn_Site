@@ -332,7 +332,7 @@
                 ></path>
               </g>
             </svg>
-            <span class="landing-status__count">31,320</span>
+            <span class="landing-status__count">31,071</span>
             <span class="landing-status__text">کاربر تو زردلرن</span>
           </div>
         </div>
@@ -344,4 +344,5 @@
     <!-- Bootstrap   -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
+<!--Test-->
 </html>

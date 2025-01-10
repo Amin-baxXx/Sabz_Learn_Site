@@ -26,6 +26,9 @@ a:hover {
 i {
   user-select: none;
 }
+svg {
+  fill: var(--white-color);
+}
 /* Start Styling Css*/
 /*main */
 .main-header__content {
@@ -186,4 +189,75 @@ i {
   background-color: var(--primary-color);
 }
 .main-header__profile-text {
+}
+/* Landing */
+.landing__title {
+  color: var(--white-color);
+  margin-top: 5rem;
+  padding-top: 6rem;
+  text-align: center;
+  font-size: 4rem;
+  word-spacing: 1rem;
+}
+.landing__subtitle {
+  text-align: center;
+  padding-top: 1rem;
+  color: var(--white-color);
+  font-size: 1.8rem;
+}
+.section {
+  background-image: url("../images/backGround/background_landing.jfif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 51rem;
+}
+.landing__searchbar {
+  text-align: center;
+  margin: 3rem auto;
+  background: var(--white-color);
+  width: 90rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+}
+.landing__search-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding-right: 1rem;
+}
+.landing__searchbar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 5rem;
+  border-radius: 0.5rem;
+  background: var(--primary-color);
+  border: none;
+  outline: none;
+  color: var(--white-color);
+  font-size: 2.2rem;
+}
+.landing-status {
+  color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 60rem;
+  /*background: red*/
+}
+.landing-status__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.landing-status__count {
+  font-size: 3rem;
+  margin-top: 1rem;
 }

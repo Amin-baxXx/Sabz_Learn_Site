@@ -245,17 +245,17 @@ svg {
 .landing-status {
   color: var(--white-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  width: 60rem;
-  /*background: red*/
+  gap: 6rem;
+  /*background: red;*/
 }
 .landing-status__item {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 171px;
 }
 .landing-status__count {
   font-size: 3rem;
@@ -344,13 +344,52 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-
   gap: 0.5rem;
 }
 .course-box__footer-link:hover .course-box__footer-icon {
   color: #1e83f0;
 }
 /*Finish Course Box*/
+/*aboutUS */
+.about-us {
+}
+.about-us__header {
+  display: flex;
+  flex-direction: column;
+}
+.about-us__title {
+  width: max-content;
+}
+.about-us__subtitle {
+  color: #9c9c9c;
+  font-size: 1.5rem;
+  margin: 1rem 0 3rem 0;
+}
+.about-us__box {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  gap: 1rem;
+  padding: 2rem;
+}
+.about-us-box__right {
+}
+.about-us-box__icon {
+  font-size: 6rem;
+  color: #666;
+}
+.about-us-box__left {
+  display: flex;
+  flex-direction: column;
+}
+.about-us-box__title {
+  font-weight: bold;
+}
+.about-us-box__text {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
 /* Start Helper Classes*/
 .title {
   font-size: 2.3rem;

@@ -417,9 +417,10 @@
                   </div>
                   <hr />
                   <div class="course-box__footer">
-                    <a class="course-box__footer-link" href="#">مشاهده دوره
-                        <i class="fas fa-arrow-left course-box__footer-icon"></i></a>
-
+                    <a class="course-box__footer-link" href="#"
+                      >مشاهده دوره
+                      <i class="fas fa-arrow-left course-box__footer-icon"></i
+                    ></a>
                   </div>
                 </div>
               </div>
@@ -561,7 +562,139 @@
                   <a href="#"
                     ><img
                       class="course-box__img"
+                      src="./folder-structure/images/courses/python.png"
+                      alt=""
+                  /></a>
+                  <div class="course-box__main">
+                    <a class="course-box__title" href="#"
+                      >دوره پروژه محور متخصص جنگو</a
+                    >
+                    <div class="course-box__rating-teacher">
+                      <div class="course-box__teacher">
+                        <i
+                          class="fas fa-chalkboard-teacher course-box__teacher-icon"
+                        ></i>
+                        <a class="course-box__teacher-link" href="#"
+                          >رضا دولتی</a
+                        >
+                      </div>
+                      <div class="course-box__rating">
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                      </div>
+                    </div>
+                    <div class="course-box__status">
+                      <div class="course-box__users">
+                        <i class="fas fa-users course-box__users"> </i>
+                        <span class="course-box__users-test">500</span>
+                      </div>
+                      <span class="course-box__price">1,000,000</span>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="course-box__footer">
+                    <a class="course-box__footer-link" href="#"
+                      >مشاهده دوره
+                      <i class="fas fa-arrow-left course-box__footer-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="courses-box">
+                  <a href="#"
+                    ><img
+                      class="course-box__img"
                       src="./folder-structure/images/courses/nodejs.png"
+                      alt=""
+                  /></a>
+                  <div class="course-box__main">
+                    <a class="course-box__title" href="#"
+                      >دوره پروژه محور متخصص جنگو</a
+                    >
+                    <div class="course-box__rating-teacher">
+                      <div class="course-box__teacher">
+                        <i
+                          class="fas fa-chalkboard-teacher course-box__teacher-icon"
+                        ></i>
+                        <a class="course-box__teacher-link" href="#"
+                          >رضا دولتی</a
+                        >
+                      </div>
+                      <div class="course-box__rating">
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                        <img
+                          class="course-box__stars"
+                          src="./folder-structure/images/svgs/star_fill.svg"
+                          alt="rating__start"
+                        />
+                      </div>
+                    </div>
+                    <div class="course-box__status">
+                      <div class="course-box__users">
+                        <i class="fas fa-users course-box__users"> </i>
+                        <span class="course-box__users-test">500</span>
+                      </div>
+                      <span class="course-box__price">1,000,000</span>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="course-box__footer">
+                    <a class="course-box__footer-link" href="#"
+                      >مشاهده دوره
+                      <i class="fas fa-arrow-left course-box__footer-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="courses-box">
+                  <a href="#"
+                    ><img
+                      class="course-box__img"
+                      src="./folder-structure/images/courses/youtuber.png"
                       alt=""
                   /></a>
                   <div class="course-box__main">
@@ -627,7 +760,75 @@
         </div>
       </div>
     </section>
-
+    <!-- About US-->
+    <section class="about-us">
+      <div class="container">
+        <div class="about-us__header">
+          <span class="about-us__title title">ما چه کمکی بهتون میکنیم</span>
+          <span class="about-us__subtitle"
+            >از اونجایی که آکادمی زردلرن یک آکادمی خصوصی هست
+          </span>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6">
+            <div class="about-us__box">
+              <div class="about-us-box__right">
+                <i class="fas fa-copyright about-us-box__icon"> </i>
+              </div>
+              <div class="about-us-box__left">
+                <span class="about-us-box__title">دوره های اختصاصی </span>
+                <span class="about-us-box__text"
+                  >با پشیبانی و کیفیت بالا ارائه میده
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-us__box">
+              <div class="about-us-box__right">
+                <i class="fas fa-leaf about-us-box__icon"> </i>
+              </div>
+              <div class="about-us-box__left">
+                <span class="about-us-box__title">اجازه تدریس </span>
+                <span class="about-us-box__text"
+                  >به هر مدرسی رو نمیده. چون کیفیت براش مهمه !
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-us__box">
+              <div class="about-us-box__right">
+                <i class="fa-regular fa-gem about-us-box__icon"> </i>
+              </div>
+              <div class="about-us-box__left">
+                <span class="about-us-box__title">دوره پولی و رایگان </span>
+                <span class="about-us-box__text"
+                  >براش مهم نیست. به مدرسینش حقوق میده تا نهایت کیفیت رو در
+                  پشتیبانی و اپدیت دوره ارائه بده
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="about-us__box">
+              <div class="about-us-box__right">
+                <i class="fas fa-copyright about-us-box__icon"> </i>
+              </div>
+              <div class="about-us-box__left">
+                <span class="about-us-box__title">اهمیت به کاربر</span>
+                <span class="about-us-box__text"
+                  >اولویت اول و آخر آکادمی آموزش برنامه نویسی سبزلرن اهمیت به
+                  کاربرها و رفع نیازهای آموزشی و رسوندن اونها به بازار کار هست
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!--Scripts  Files 🫂🥰-->
     <!-- Font-awesome -->
     <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>

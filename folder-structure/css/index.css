@@ -162,7 +162,6 @@ svg {
 }
 .main-header__cart-btn {
   transition: color 200ms ease;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -413,7 +412,7 @@ svg {
   height: 205px !important;
   object-fit: cover;
 }
-/*Start articles Style*/
+/*Start articles header Style*/
 .articles {
 }
 .articles-header {
@@ -449,8 +448,60 @@ svg {
   color: var(--primary-color);
   background-color: var(--white-color);
 }
-/*Finish  articles Style*/
 
+/*Finish  articles header Style*/
+/*Start Article card*/
+
+.article-card {
+  margin-bottom: 4rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 5px 30px rgba(70, 72, 77, 0.8);
+  display: flex;
+  flex-direction: column;
+  transition: all linear 200ms;
+  height: 45.5rem;
+}
+.article-card:hover {
+  transform: translateY(-0.6rem);
+}
+.article-card__header {
+}
+.article-card__content {
+  padding: 1rem 2rem 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.article-card__link {
+  font-weight: bold;
+}
+.article-card__link-img {
+}
+.article-card__img {
+  border-radius: 1rem 1rem 0 0;
+
+  width: 100%;
+}
+.article-card__text {
+  color: var(--dark-color);
+  font-size: 1.4rem;
+}
+.article-cart__btn {
+  padding: 0.5rem 0;
+  text-align: center;
+  border-radius: 0.5rem;
+  transition:
+    color 400ms ease,
+    background-color 300ms ease;
+  width: 12rem;
+  border: 2px solid var(--primary-color);
+}
+.article-cart__btn:hover {
+  color: var(--white-color) !important;
+  background-color: var(--primary-color);
+}
+/*finish Article card*/
 /* Start Helper Classes*/
 .title {
   margin: 4rem 0 0 0;

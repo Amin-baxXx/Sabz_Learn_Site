@@ -15,9 +15,9 @@ const swiper = new Swiper(".swiper-container", {
     },
     grabCursor: true,
   },
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  //   pauseOnMouseEnter: true, // توقف حرکت هنگام هاور
-  // },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true, // توقف حرکت هنگام هاور
+  },
 });

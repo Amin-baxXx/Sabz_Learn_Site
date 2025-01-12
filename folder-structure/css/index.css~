@@ -1,194 +1,12 @@
 @import "variables.css";
-@import "topBar.css";
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-body {
-  line-height: 1.6;
-  font-size: 1.7rem;
-  font-family: var(--primary-font);
-}
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  outline: none;
-}
-a {
-  text-decoration: none;
-  color: var(--dark-color);
-  /*transition: all 400ms ease;*/
-}
-a:hover {
-  color: #1e83f0;
-}
-i {
-  user-select: none;
-}
-svg {
-  fill: var(--white-color);
-}
-/* Start Styling Css*/
+@import "module/topBar.css";
+@import "module/nav-bar.css";
+@import "fonts.css";
+@import "module/default.css";
+@import "module/footer.css";
+@import "module/course-box.css";
 /*main */
-.main-header__content {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-/* Right*/
-.main-header__right {
-  display: flex;
-  gap: 3rem;
-}
-.main-header__logo {
-}
-.main-header__menu {
-  display: flex;
-  gap: 4rem;
-}
-.main-header__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #7f8187;
-  position: relative;
-}
-.arrow::before {
-  content: "";
-  cursor: pointer;
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  display: block;
-  background: black;
-  transform: rotate(50deg);
-  left: 1.5rem;
-  border-radius: 5px;
-  transition: 0.2s linear all;
-}
-.arrow::after {
-  cursor: pointer;
 
-  content: "";
-  transition: 0.2s linear all;
-  position: absolute;
-  width: 10px;
-  height: 2px;
-  display: block;
-  background: black;
-  rotate: -50deg;
-  border-radius: 5px;
-  left: 9.5px;
-}
-.main-header__item:hover .arrow::before {
-  transform: rotate(-50deg);
-}
-.main-header__item:hover .arrow::after {
-  transform: rotate(100deg);
-}
-/**/
-
-.main-header__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-left: 4rem;
-}
-.main-header__item:nth-child(1) {
-  .main-header__link {
-    padding-left: 0;
-  }
-}
-.main-header__item:nth-child(6) {
-  .main-header__link {
-    padding-left: 0;
-  }
-}
-.main-header__link:hover {
-  color: #7f8187;
-}
-/*Drop Down*/
-.main-header__dropdown {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 4.5rem;
-  left: 0;
-  right: 0;
-  transform: translateX(25px);
-  background-color: var(--white-color);
-  transition: all 100ms linear;
-  transition-behavior: allow-discrete;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
-  border-radius: 0.5rem;
-  width: 24rem;
-  z-index: 1;
-  padding: 1rem;
-  border-bottom: 3px solid var(--primary-color);
-  visibility: hidden;
-  opacity: 0;
-}
-.main-header__item:hover .main-header__dropdown {
-  visibility: visible;
-  transform: translateX(0px);
-  opacity: 1;
-}
-.main-header__link {
-}
-.main-header__dropdown-item {
-}
-.main-header__dropdown-link {
-}
-/* Left*/
-.main-header__left {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.main-header__search-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.3rem;
-  height: 4.3rem;
-  border-radius: 0.5rem;
-  background: var(--primary-color);
-}
-.main-header__search-icon {
-  color: var(--white-color);
-  font-size: 2.2rem;
-}
-.main-header__cart-btn {
-  transition: color 200ms ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.3rem;
-  height: 4.3rem;
-  border-radius: 0.5rem;
-  background: #f0f2f7;
-}
-.main-header__cart-icon {
-}
-.main-header__profile {
-  display: flex;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  transition:
-    color 400ms ease,
-    background-color 300ms ease;
-
-  border: 2px solid var(--primary-color);
-}
-.main-header__profile:hover {
-  color: var(--white-color) !important;
-  background-color: var(--primary-color);
-}
-.main-header__profile-text {
-}
 /* Landing */
 .landing__title {
   color: var(--white-color);
@@ -296,58 +114,7 @@ svg {
   background-color: var(--white-color);
 }
 /* Finish latest courses Styles*/
-/*Course Box*/
-.courses-box {
-  background-color: var(--white-color);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
-  height: 100%;
-  /*width: max-content;*/
-  border-radius: 1rem;
-  transition: all linear 200ms;
-  cursor: pointer;
-}
-.courses-box:hover {
-  transform: translateY(-0.6rem);
-}
-.course-box__img {
-  border-radius: 1rem 1rem 0 0;
-  width: 100%;
-}
-.course-box__main {
-  padding: 0.3rem 1rem;
-}
-.course-box__rating-teacher {
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.course-box__status {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.course-box__footer {
-  display: flex;
-  justify-content: center;
-  padding: 1rem 3rem 2rem 3rem;
-  align-items: center;
-  gap: 0.5rem;
-}
-.course-box__footer-icon {
-  color: var(--primary-color);
-}
-.course-box__footer-link {
-  color: var(--primary-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-.course-box__footer-link:hover .course-box__footer-icon {
-  color: #1e83f0;
-}
-/*Finish Course Box*/
+
 /*aboutUS */
 .about-us {
 }
@@ -441,12 +208,16 @@ svg {
   background-color: var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  border: 2px solid var(--primary-color);
+  transition:
+    color linear 300ms,
+    background-color linear 300ms;
 }
 
 .articles-header__link:hover {
-  color: var(--white-color);
+  color: var(--primary-color);
+  background-color: var(--white-color);
 }
-
 .articles-header__icon {
   margin-right: 0.5rem;
   font-size: 1.5rem;
@@ -465,7 +236,7 @@ svg {
 }
 
 .article-card__img {
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   height: 238px;
@@ -500,7 +271,8 @@ svg {
 }
 
 /* Finish Articles Styles */
-/*finish Article card*/
+/*ّFooter*/
+
 /* Start Helper Classes*/
 .title {
   margin: 4rem 0 0 0;
@@ -535,4 +307,17 @@ svg {
   z-index: -1;
   background-color: var(--primary-color);
 }
+
+.diamond:after {
+  content: "";
+  position: absolute;
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--primary-color);
+  border-radius: 0.7rem;
+  opacity: 0.3;
+  transform: rotate(45deg);
+  right: 1rem;
+}
+
 /* Finish Helper Classes*/

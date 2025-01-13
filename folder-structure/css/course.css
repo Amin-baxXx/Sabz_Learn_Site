@@ -100,3 +100,67 @@
   width: 100%;
   border-radius: 1rem;
 }
+/*Start Course Boxes Styles*/
+
+.course-boxes__box {
+  display: flex;
+  border-radius: 0.5rem;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 5px 30px rgba(70, 72, 77, 0.08);
+  margin: 1rem 0;
+  align-items: center;
+}
+.course-boxes__box-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-boxes__box-right-icon {
+  font-size: 3.2rem;
+  color: var(--primary-color);
+}
+.course-boxed__box-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+.course-boxed__box-left-t {
+  font-size: 1.6rem;
+  color: #858c96;
+}
+.course-boxed__box-left-subtitle {
+  font-size: 1.6rem;
+  color: #7e7e7f;
+}
+/*Finish  Course Boxes Styles*/
+
+/* finish Courses Info Styles*/
+/* Start Course boxes progress Styles*/
+.course-progress {
+  border-radius: 1rem;
+  margin: 3rem 0;
+  padding: 2rem 2rem 1.2rem 2rem;
+  background-color: #f0f2f7;
+}
+.course-progress__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+.course-progress__icon {
+  font-size: 2rem;
+  color: #7b868a;
+}
+.course-progress__title {
+  font-size: 1.5rem;
+  color: #7b868a;
+}
+.course-progress__bar {
+  border-radius: 10rem;
+  height: 1rem;
+}
+.progress-bar {
+  background-color: var(--primary-color);
+}
+/* Fimish Course box progress Styles*/

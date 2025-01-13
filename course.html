@@ -7,9 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <!--      Swiper-->
-    <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.css" />
+    <title>دوره جاوااسکریپت</title>
     <!-- Bootstrap   -->
     <link
       rel="stylesheet"
@@ -18,10 +16,10 @@
     <!-- Rest-Css -->
     <link rel="stylesheet" href="folder-structure/css/reset.css" />
     <!--    Main-css      -->
-    <link rel="stylesheet" href="folder-structure/css/category.css" />
+    <link rel="stylesheet" href="folder-structure/css/course.css" />
   </head>
+
   <body>
-    <!--  Header-->
     <header class="header">
       <div class="header__top-bar">
         <div class="header__container container-fluid">
@@ -198,301 +196,82 @@
                 <i class="fas fa-shopping-cart main-header__cart-icon"></i>
               </a>
               <a href="#" class="main-header__profile">
-                <span class="main-header__profile-text"
-                  >سید امین موحدی راد</span
-                >
+                <span class="main-header__profile-text">Aminbaxxx</span>
               </a>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <!-- Finish Header-->
 
-    <!--  Courses Section-->
-    <section class="courses">
+    <!-- Start breadCrumbs-->
+    <section class="breadcrumb">
       <div class="container">
-        <div class="courses-top-bar">
-          <div class="courses-top-bar__right">
-            <div class="courses-top-bar__row-btn course-top-bar__icon--active">
-              <i class="fas fa-border-all courses-top-bar__icon"></i>
-            </div>
-            <div class="courses-top-bar__column-btn">
-              <i class="fa fa-solid fa-align-left courses-top-bar__icon"></i>
-            </div>
-            <div class="courses-top-bar__section">
-              <span class="courses-top-bar__selection-title"
-                >مرتب سازی پیش فرض
-              </span>
-
-              <i class="fas fa-angle-down courses-top-bar__selection-icon"></i>
-              <ul class="courses-top-bar__selection-list">
-                <li
-                  class="courses-top-bar__selection-item courses-top-bar__selection-item--active"
-                >
-                  مرتب‌سازی پیش فرض
-                </li>
-                <li class="courses-top-bar__selection-item">
-                  مرتب‌سازی بر اساس محبوبیت
-                </li>
-                <li class="courses-top-bar__selection-item">
-                  مرتب‌سازی بر اساس امتیاز
-                </li>
-                <li class="courses-top-bar__selection-item">
-                  مرتب سازی بر اساس ارزان‌ترین
-                </li>
-                <li class="courses-top-bar__selection-item">
-                  مرتب سازی بر اساس گران‌ترین
-                </li>
-              </ul>
-            </div>
+        <div class="breadcrumb__content">
+          <div class="breadcrumb__home--content-icon">
+            <i class="fas fa-home breadcrumb__home-icon"></i>
           </div>
-          <div class="courses-top-bar__left">
-            <form action="#" class="courses-top-bar__form">
-              <input
-                class="courses-top-bar__input"
-                type="text"
-                placeholder="جستجو در دوره ها"
-              />
-              <i class="fas fa-search top-bar__search-icon"></i>
-            </form>
-          </div>
-        </div>
-        <div class="courses-top-content">
-          <div class="container">
-            <div class="row">
-              <div class="col-4">
-                <div class="courses-box">
-                  <a href="#"
-                    ><img
-                      class="course-box__img"
-                      src="./folder-structure/images/courses/jango.png"
-                      alt=""
-                  /></a>
-                  <div class="course-box__main">
-                    <a class="course-box__title" href="#"
-                      >دوره پروژه محور متخصص جنگو</a
-                    >
-                    <div class="course-box__rating-teacher">
-                      <div class="course-box__teacher">
-                        <i
-                          class="fas fa-chalkboard-teacher course-box__teacher-icon"
-                        ></i>
-                        <a class="course-box__teacher-link" href="#"
-                          >رضا دولتی</a
-                        >
-                      </div>
-                      <div class="course-box__rating">
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                      </div>
-                    </div>
-                    <div class="course-box__status">
-                      <div class="course-box__users">
-                        <i class="fas fa-users course-box__users"> </i>
-                        <span class="course-box__users-test">500</span>
-                      </div>
-                      <span class="course-box__price">1,000,000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="course-box__footer">
-                    <a class="course-box__footer-link" href="#"
-                      >مشاهده دوره
-                      <i class="fas fa-arrow-left course-box__footer-icon"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="courses-box">
-                  <a href="#"
-                    ><img
-                      class="course-box__img"
-                      src="./folder-structure/images/courses/js_project.png"
-                      alt=""
-                  /></a>
-                  <div class="course-box__main">
-                    <a class="course-box__title" href="#"
-                      >دوره پروژه محور متخصص جنگو</a
-                    >
-                    <div class="course-box__rating-teacher">
-                      <div class="course-box__teacher">
-                        <i
-                          class="fas fa-chalkboard-teacher course-box__teacher-icon"
-                        ></i>
-                        <a class="course-box__teacher-link" href="#"
-                          >رضا دولتی</a
-                        >
-                      </div>
-                      <div class="course-box__rating">
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                      </div>
-                    </div>
-                    <div class="course-box__status">
-                      <div class="course-box__users">
-                        <i class="fas fa-users course-box__users"> </i>
-                        <span class="course-box__users-test">500</span>
-                      </div>
-                      <span class="course-box__price">1,000,000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="course-box__footer">
-                    <a class="course-box__footer-link" href="#"
-                      >مشاهده دوره
-                      <i class="fas fa-arrow-left course-box__footer-icon"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-4">
-                <div class="courses-box">
-                  <a href="#"
-                    ><img
-                      class="course-box__img"
-                      src="./folder-structure/images/courses/python.png"
-                      alt=""
-                  /></a>
-                  <div class="course-box__main">
-                    <a class="course-box__title" href="#"
-                      >دوره پروژه محور متخصص جنگو</a
-                    >
-                    <div class="course-box__rating-teacher">
-                      <div class="course-box__teacher">
-                        <i
-                          class="fas fa-chalkboard-teacher course-box__teacher-icon"
-                        ></i>
-                        <a class="course-box__teacher-link" href="#"
-                          >رضا دولتی</a
-                        >
-                      </div>
-                      <div class="course-box__rating">
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                        <img
-                          class="course-box__stars"
-                          src="./folder-structure/images/svgs/star_fill.svg"
-                          alt="rating__start"
-                        />
-                      </div>
-                    </div>
-                    <div class="course-box__status">
-                      <div class="course-box__users">
-                        <i class="fas fa-users course-box__users"> </i>
-                        <span class="course-box__users-test">500</span>
-                      </div>
-                      <span class="course-box__price">1,000,000</span>
-                    </div>
-                  </div>
-                  <hr />
-                  <div class="course-box__footer">
-                    <a class="course-box__footer-link" href="#"
-                      >مشاهده دوره
-                      <i class="fas fa-arrow-left course-box__footer-icon"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="courses-paganation">
-          <ul class="courses__pagination-list">
-            <li class="courses__pagination-item">
-              <a class="courses__pagination-link" href="#"
-                ><i class="fas fa-long-arrow-right courses__pagination-icon"></i
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="#"
+                >خانه <i class="fa-solid fa-angle-left breadcrumb__icon"></i
               ></a>
             </li>
-            <li class="courses__pagination-item">
-              <a class="courses__pagination-link" href="#">1</a>
-            </li>
-            <li class="courses__pagination-item">
-              <a class="courses__pagination-link" href="#">2</a>
-            </li>
-            <li class="courses__pagination-item">
-              <a
-                class="courses__pagination-link courses__pagination-link--active"
-                href="#"
-                >3</a
-              >
-            </li>
-            <li class="courses__pagination-item">
-              <a class="courses__pagination-link" href="#"
-                ><i class="fas fa-long-arrow-left courses__pagination-icon"></i
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="#"
+                >آموزش برنامه نویسی فرانت اند
+                <i class="fa-solid fa-angle-left breadcrumb__icon"></i
               ></a>
+            </li>
+            <li class="breadcrumb__item">
+              <a class="breadcrumb__link" href="#">دورمتخصص جاوااسکریپت </a>
             </li>
           </ul>
         </div>
       </div>
     </section>
-    <!--  Finish Courses Section-->
-
+    <!-- Finish breadCrumbs-->
+    <!-- start course main Info-->
+    <section class="course-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <a class="course-info__link" href="#"
+              >آموزش برنامه نویسی فرانت اند</a
+            >
+            <h1 class="course-info__title">دورمتخصص جاوااسکریپت</h1>
+            <p class="course-info__text">
+              امروزه کتابخانه‌ها کد نویسی را خیلی آسان و لذت بخش تر کرده اند. به
+              قدری که حتی امروزه هیچ شرکت برنامه نویسی پروژه های خود را با
+              Vanilla Js پیاده سازی نمی کند و همیشه از کتابخانه ها و فریمورک های
+              موجود استفاده می کند. پس شما هم اگه میخواید یک برنامه نویس عالی
+              فرانت اند باشید، باید کتابخانه های کاربردی که در بازار کار استفاده
+              می شوند را به خوبی بلد باشید
+            </p>
+            <div class="course-info__social-media">
+              <a href="#" class="course-info__social-media-item"
+                ><i class="fa-brands fa-twitter course-info__icon"></i
+              ></a>
+              <a href="#" class="course-info__social-media-item"
+                ><i class="fa-brands fa-telegram course-info__icon"></i
+              ></a>
+              <a href="#" class="course-info__social-media-item icon-container"
+                ><i class="fa-brands fa-instagram course-info__icon"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6">
+            <video
+              class="courses-info__vidoe"
+              controls
+              src=""
+              poster="folder-structure/images/courses/js_project.png"
+            ></video>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Finish course main Info-->
     <!--    footer-->
     <footer class="footer container">
       <div class="footer__grid">
@@ -574,6 +353,7 @@
       </div>
     </footer>
     <!--  Finish  footer-->
+
     <!--    Copy Right Footer-->
     <div class="footer__copyright">
       <span class="footer__copyright-text"

@@ -1,0 +1,102 @@
+@import "variables.css";
+@import "module/topBar.css";
+@import "module/nav-bar.css";
+@import "module/default.css";
+@import "module/footer.css";
+@import "module/course-box.css";
+@import "module/pagination.css";
+.breadcrumb {
+  margin-bottom: 2rem;
+}
+.breadcrumb__content {
+  display: flex;
+  background-color: #f0f2f7;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+}
+.breadcrumb__home--content-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 1rem;
+  background-color: var(--white-color);
+  font-size: 1.5rem;
+}
+.breadcrumb__home-icon {
+  font-size: 1.8rem;
+  color: #909aa7;
+}
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 1rem;
+}
+.breadcrumb__link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1.5rem;
+  /*color: #909aa7;*/
+}
+.breadcrumb__link-icon {
+  font-size: 1.5rem;
+  color: #909aa7;
+}
+.breadcrumb__link:hover {
+  color: #444649;
+}
+.breadcrumb__link:hover .breadcrumb__link-icon {
+  color: #444649;
+}
+/* Start Courses Info Styles*/
+.courses-info {
+  margin: 6rem 0;
+}
+.course-info__link {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  border-radius: 0.3rem;
+  padding: 0.4rem 1rem;
+  background-color: #f9e79f;
+}
+.course-info__link:hover {
+  color: var(--primary-color);
+}
+.course-info__title {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  color: #464749;
+}
+.courses-info__text {
+  font-size: 1.5rem;
+  /*line-height: 1.5;*/
+  margin-bottom: 3rem;
+  color: #7b868a;
+}
+.course-info__social-media {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
+.course-info__social-media-item {
+  color: #b1bbbf;
+  transition: all 200ms ease;
+}
+
+/* استایل اولیه لینک */
+.course-info__social-media-item {
+  color: #333; /* رنگ اولیه آیکون */
+  transition: color 0.3s ease-in-out;
+  font-size: 2rem;
+}
+.icon-container:nth-child(3):hover {
+  color: #e1306c;
+}
+.courses-info__vidoe {
+  width: 100%;
+  border-radius: 1rem;
+}

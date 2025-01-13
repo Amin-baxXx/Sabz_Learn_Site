@@ -5,6 +5,7 @@
 @import "module/footer.css";
 @import "module/course-box.css";
 @import "module/pagination.css";
+@import "module/helperclass.css";
 .breadcrumb {
   margin-bottom: 2rem;
 }
@@ -163,4 +164,43 @@
 .progress-bar {
   background-color: var(--primary-color);
 }
+
 /* Fimish Course box progress Styles*/
+/* Start introduction Style*/
+.introduction {
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 13px 1px rgba(70, 72, 77, 0.08);
+}
+.introduction__img {
+  display: block;
+  margin-top: 3rem;
+  border-radius: 1rem;
+}
+.introduction__text {
+  margin-top: 2rem;
+  color: #7a7a7a;
+  font-size: 1.5rem;
+}
+.introduction__btns {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.introduction__btns-item {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transition:
+    200ms color linear,
+    background-color 200ms linear;
+}
+.introduction__btns-item:hover {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+}
+/* Finish introduction Style*/

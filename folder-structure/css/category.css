@@ -5,6 +5,7 @@
 @import "module/footer.css";
 @import "module/course-box.css";
 @import "module/pagination.css";
+@import "module/helperclass.css";
 /*Start Courses Styles*/
 .courses {
   margin: 6rem 0;

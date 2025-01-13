@@ -203,4 +203,62 @@
   color: var(--white-color);
   background-color: var(--primary-color);
 }
+.introduction__topic {
+  margin-top: 4rem;
+}
+.accordion {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  background-color: #f7f9fa;
+}
+.accordion-button {
+  background-color: #f7f9fa;
+  font-size: 1.5rem;
+  padding: 1.25rem;
+}
+.accordion-button:after {
+  margin-left: 1rem;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #f7f9fa;
+}
+.introduction__accordion-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.25rem;
+}
+.introduction__accordion-right {
+  display: flex;
+  align-items: center;
+}
+.introduction__accordion-count {
+  width: 3.5rem;
+  height: 3.5rem;
+  border: 1px solid #bfbfbf;
+  border-radius: 50%;
+  color: #656464;
+  text-align: center;
+  line-height: 3.5rem;
+}
+.introduction__accordion-icon {
+  margin: 0 1.5rem;
+  font-size: 1.8rem;
+  color: #939aa3;
+  transition: 100ms color linear;
+}
+.introduction__accordion-link {
+  transition: 100ms color linear;
+  color: #161616;
+}
+.introduction__accordion-right:has(.introduction__accordion-link:hover)
+  .introduction__accordion-icon {
+  color: #cd201f;
+}
+
+.introduction__accordion-time {
+  color: #7a7a7a;
+}
 /* Finish introduction Style*/

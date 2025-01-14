@@ -1,0 +1,9 @@
+@import "variables.css";
+@import "module/topBar.css";
+@import "module/nav-bar.css";
+@import "module/default.css";
+@import "module/footer.css";
+@import "module/course-box.css";
+@import "module/pagination.css";
+@import "module/helperclass.css";
+@import "module/breadcrumb.css";

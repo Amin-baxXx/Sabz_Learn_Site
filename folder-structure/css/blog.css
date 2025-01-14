@@ -8,6 +8,53 @@
 @import "module/helperclass.css";
 @import "module/breadcrumb.css";
 @import "module/siderbarcourses-box.css";
+
+/*Start article details Styles*/
+.article {
+  padding: 2.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 30px rgba(70, 72, 77, 0.08);
+}
+.article__title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: var(--dark-color);
+  border-bottom: 2px solid #f3f3f3;
+  padding-bottom: 1rem;
+}
+.article__haeder {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+.article-header__text {
+  font-size: 1.3rem;
+  color: #8f8f8f;
+}
+.article-header__icon {
+  font-size: 1.6rem;
+  color: #c7c7c7;
+}
+.article__banner {
+  margin-top: 4rem;
+}
+.article__score {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.article__score-icon {
+  margin-left: -0.4rem;
+}
+.article__score-text {
+  margin-right: 2rem;
+  font-size: 1.7rem;
+  color: #7d7e7f;
+}
+/*finish article details Styles*/
+
 /*Start sidebar-articles*/
 .course-info {
   overflow: hidden;

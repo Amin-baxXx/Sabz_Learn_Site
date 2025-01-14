@@ -53,9 +53,9 @@
   color: #444649;
 }
 /* Start Courses Info Styles*/
-.courses-info {
-  margin: 6rem 0;
-}
+/*.courses-info {*/
+/*  margin: 6rem 0;*/
+/*}*/
 .course-info__link {
   font-size: 1.2rem;
   color: var(--primary-color);
@@ -331,6 +331,7 @@
   box-shadow: 0 0 13px 1px rgba(70, 72, 77, 0.08);
   border: 1px solid #f2f2f2;
 }
+
 .course-info__register {
   display: flex;
   align-items: center;
@@ -442,5 +443,31 @@
   color: blue;
   font-weight: bold;
 }
+.course-info__courses-title {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+}
+.course-info__courses-list {
+  display: flex;
+  /*align-items: center;*/
+  flex-direction: column;
+  gap: 2rem;
+}
 
+.course-info__courses-link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.course-info__courses-img {
+  width: 70px;
+  border-radius: 0.5rem;
+}
+.course-info__courses-text {
+  font-size: 1.3rem;
+  color: #8d8d8d;
+  font-weight: bold;
+}
 /* Finish sidebar Styles  */

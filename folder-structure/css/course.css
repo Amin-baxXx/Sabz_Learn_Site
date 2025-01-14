@@ -408,4 +408,39 @@
   font-size: 1.4rem;
   margin-right: 0.5rem;
 }
+.course-info__header-short-url {
+  display: flex;
+  align-items: center;
+  color: #7b868a;
+}
+.course-info__short-url-icon {
+  font-size: 2rem;
+}
+.course-info__header-short-url-text {
+  font-size: 1.7rem;
+  margin-right: 0.5rem;
+}
+.course-info__short-url {
+  display: block;
+  margin: 1rem 0;
+  border: 1px solid #dcdcdc;
+  color: #7a7a7a;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.4rem;
+}
+.course-info__topic-title {
+  font-size: 1.8rem;
+  display: block;
+  color: var(--dark-color);
+}
+.course-info__topic-text {
+  font-size: 1.5rem;
+  color: #7d7e7f;
+}
+.course-info__topic-link {
+  color: blue;
+  font-weight: bold;
+}
+
 /* Finish sidebar Styles  */

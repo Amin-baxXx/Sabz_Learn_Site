@@ -7,3 +7,74 @@
 @import "module/pagination.css";
 @import "module/helperclass.css";
 @import "module/breadcrumb.css";
+@import "module/siderbarcourses-box.css";
+/*Start sidebar-articles*/
+.course-info {
+  overflow: hidden;
+}
+.course-info__courses-title {
+  position: relative;
+}
+.course-info__courses-title:before {
+  content: "";
+  position: absolute;
+  width: 22px;
+  height: 39px;
+  background-color: var(--primary-color);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 12px;
+  right: -2.8rem;
+  top: -0.5rem;
+  transform: skew(-10deg);
+}
+.sidebar-articles__list {
+  margin-top: 2rem;
+}
+.sidebar-articles__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0.9rem 1.3rem 0.9rem 1rem;
+  transition:
+    color 200ms linear,
+    background-color 200ms linear,
+    padding-right 200ms linear;
+}
+.sidebar-articles__link {
+  transition: color 200ms linear;
+  font-size: 1.3rem;
+}
+.sidebar-articles__link:hover {
+  color: var(--primary-color);
+}
+.sidebar-articles__item:hover {
+  color: var(--primary-color);
+  padding-right: 2rem;
+  background-color: #f8f9fa;
+}
+.last-articles__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #eeeeee;
+  padding: 0.9rem 1.3rem 0.9rem 1rem;
+  transition:
+    color 200ms linear,
+    background-color 200ms linear,
+    padding-right 200ms linear;
+}
+.last-articles__item:hover {
+  color: var(--primary-color);
+  padding-right: 2rem;
+  background-color: #f8f9fa;
+  .last-articles__link {
+    color: var(--primary-color);
+  }
+}
+.last-articles__link {
+  transition: color 200ms linear;
+  font-size: 1.3rem;
+}
+
+/*Fininsh sidebar-articles*/

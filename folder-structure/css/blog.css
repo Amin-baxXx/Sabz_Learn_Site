@@ -51,7 +51,7 @@
 .article__score-text {
   margin-right: 2rem;
   font-size: 1.7rem;
-  color: #7d7e7f;
+  color: black;
 }
 /*finish article details Styles*/
 
@@ -125,3 +125,10 @@
 }
 
 /*Fininsh sidebar-articles*/
+/* Start Helper Classes*/
+.paragraph {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  color: #7e7e7f;
+}
+/* Finish Helper Classes*/

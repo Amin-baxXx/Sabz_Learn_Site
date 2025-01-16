@@ -53,6 +53,27 @@
   font-size: 1.7rem;
   color: black;
 }
+.article-read {
+  background-color: #f2f2f2;
+  border-radius: 3rem;
+  padding: 2rem 3rem;
+  margin: 3rem 0;
+}
+.article-read__title {
+  display: block;
+  color: #333333;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+.article-read__link {
+  font-size: 1.5rem;
+  line-height: 2;
+  color: #1e83f0;
+}
+.article-read__link:hover {
+  text-decoration: underline;
+}
 /*finish article details Styles*/
 
 /*Start sidebar-articles*/
@@ -131,4 +152,5 @@
   line-height: 3rem;
   color: #7e7e7f;
 }
+
 /* Finish Helper Classes*/

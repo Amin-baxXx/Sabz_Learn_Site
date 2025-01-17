@@ -152,13 +152,13 @@
   text-align: center;
   margin: 0 2rem;
 }
-.comment {
+.comments {
   display: flex;
   flex-direction: column;
 }
 .comments__title {
   color: var(--dark-color);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 .comments__text {
   margin: 1.5rem 0;
@@ -187,7 +187,7 @@
   height: 18.5rem;
   border-radius: 0.5rem;
   border: 1px solid #dcdcdc;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07);
 }
 /* FinishSuggestion article*/
 /*Start sidebar-articles*/

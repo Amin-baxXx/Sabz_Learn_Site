@@ -14,6 +14,27 @@
   position: relative;
   overflow: hidden;
 }
+.login-register::after {
+  content: "";
+  position: absolute;
+  /*top: -10rem;*/
+  width: 150%;
+  height: 380px;
+  background-color: #f5d366;
+  z-index: -10000;
+  transform: rotate(-4deg);
+}
+.login-register::before {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  width: 150%;
+  height: 380px;
+  background-color: #f0c432;
+  z-index: -9999;
+  transform: rotate(-4deg);
+}
+
 .login {
   background-color: var(--white-color);
   display: flex;

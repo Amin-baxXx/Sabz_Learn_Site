@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body {
+    line-height: 1.6;
+    font-size: 1.7rem;
+    font-family: var(--primary-font);
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    color: var(--dark-color);
+    /*transition: all 400ms ease;*/
+}
+a:hover {
+    color: #1e83f0;
+}
+i {
+    user-select: none;
+}
+svg {
+    fill: var(--white-color);
+}
+/* Start Styling Css*/

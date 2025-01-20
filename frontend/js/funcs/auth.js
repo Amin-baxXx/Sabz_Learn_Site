@@ -1,3 +1,10 @@
+import {
+  showSwal,
+  saveIntoLocalStorage,
+  getFromLocalStorage,
+  getToken,
+} from "../funcs/utils.js";
+
 const register = () => {
   const nameInput = document.querySelector("#name");
   const usernameInput = document.querySelector("#username");
@@ -19,23 +26,30 @@ const register = () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(newUserInfos),
-  }).then((response) => {
-    if (response.status === 201) {
-      showSwal("نام کاربری قبلا استفاده شده", "error", "تحصیح اطلاعات ").then(
-        (result) => {
-          location.href = "index.html";
-        },
-      );
-    } else if (response.status === 409) {
-      showSwal(
-        "نام کاربری قبلا استفاده شده",
-        "error",
-        "تحصیح اطلاعات ",
-        () => {},
-      );
-    }
-
-    return response.json().then((result) => console.log(result));
-  });
+  })
+    .then((response) => {
+      if (response.status === 201) {
+        showSwal(
+          "با موفقیت ثبت نام شدید",
+          "success",
+          "برای ورود کلیک کنید ",
+          (result) => {
+            location.href = "index.html";
+          },
+        );
+      } else if (response.status === 409) {
+        showSwal(
+          "نام کاربری قبلا استفاده شده",
+          "error",
+          "تحصیح اطلاعات ",
+          () => {},
+        );
+      }
+      return response.json();
+    })
+    .then((result) => {
+      saveIntoLocalStorage("user", result.accessToken);
+    });
 };
+
 export { register };

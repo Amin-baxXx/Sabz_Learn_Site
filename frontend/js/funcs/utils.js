@@ -6,7 +6,7 @@ const showSwal = (title, icon, confirmButtonText, callback) => {
   }).then((result) => callback(result));
 };
 const saveIntoLocalStorage = (key, value) => {
-  return localStorage.setItem(key, value);
+  return localStorage.setItem(key, JSON.stringify(value));
 };
 const getFromLocalStorage = (key) => {
   return JSON.stringify(localStorage.getItem(key));

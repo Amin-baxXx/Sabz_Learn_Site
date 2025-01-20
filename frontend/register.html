@@ -13,6 +13,11 @@
       rel="stylesheet"
       href="./node_modules/bootstrap/dist/css/bootstrap.rtl.css"
     />
+    <!--    Sweet alert-->
+    <link
+      rel="stylesheet"
+      href="./node_modules/sweetalert2/dist/sweetalert2.min.css"
+    />
     <!-- Rest-Css -->
     <link rel="stylesheet" href="css/reset.css" />
     <!--    Main-css      -->
@@ -218,6 +223,7 @@
               type="text"
               placeholder="نام و نام خانوادگی  "
               class="login-form__username-input"
+              id="name"
             />
             <i class="fa fa-user login-form__username-icon"></i>
           </div>
@@ -226,6 +232,7 @@
               type="text"
               placeholder="نام کاربری "
               class="login-form__username-input"
+              id="username"
             />
             <i class="fa fa-user login-form__username-icon"></i>
           </div>
@@ -234,6 +241,7 @@
               type="email"
               placeholder=" آدرس ایمیل "
               class="login-form__username-input"
+              id="email"
             />
             <i class="fa fa-user login-form__username-icon"></i>
           </div>
@@ -242,6 +250,7 @@
               type="tel"
               placeholder=" شماره تماس"
               class="login-form__username-input"
+              id="phone"
             />
             <i class="fa fa-user login-form__username-icon"></i>
           </div>
@@ -250,11 +259,12 @@
               type="password"
               placeholder="رمز عبور  "
               class="login-form__password-input"
+              id="password"
             />
             <i class="fa fa-lock-open login-form__password-icon"></i>
           </div>
 
-          <button type="submit" class="login-form__btn">
+          <button type="submit" class="login-form__btn" id="register-btn">
             <i class="fas fa-sign-out-alt login-form__btn-icon"></i>
             <span class="login-form__btn-text">ثبت نام</span>
           </button>
@@ -379,7 +389,11 @@
     <!--   Finish  Copy Right Footer-->
     <!-- Bootstrap   -->
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!--    Sweet alert-->
+    <script src="node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <!-- Font-awesome -->
     <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!--  My script File 🥰-->
+    <script type="module" src="js/register.js"></script>
   </body>
 </html>

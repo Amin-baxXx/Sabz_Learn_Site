@@ -1,4 +1,6 @@
 "use strict";
+import { getAndShowAllCourses } from "./funcs/shared.js";
+
 const $ = document;
 const landing__title = $.querySelector(".landing__title");
 const landingstatus__count = $.querySelectorAll(".landing-status__count");
@@ -12,6 +14,7 @@ window.addEventListener("load", () => {
   landingstatus__count.forEach((item) => {
     numWriter(item);
   });
+  getAndShowAllCourses().then((data) => console.log(data));
 });
 
 const typewriter = function (text, index) {

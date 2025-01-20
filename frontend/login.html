@@ -196,7 +196,7 @@
                 <i class="fas fa-shopping-cart main-header__cart-icon"></i>
               </a>
               <a href="#" class="main-header__profile">
-                <span class="main-header__profile-text">Aminbaxxx</span>
+                <!--                <span class="main-header__profile-text">Aminbaxxx</span>-->
               </a>
             </div>
           </div>
@@ -220,6 +220,7 @@
               type="text"
               placeholder="نام کاربری یا آدرس ایمیل "
               class="login-form__username-input"
+              id="identifier"
             />
             <i class="fa fa-user login-form__username-icon"></i>
           </div>
@@ -228,11 +229,12 @@
               type="password"
               placeholder="رمز عبور  "
               class="login-form__password-input"
+              id="password"
             />
             <i class="fa fa-lock-open login-form__password-icon"></i>
           </div>
 
-          <button type="submit" class="login-form__btn">
+          <button type="submit" class="login-form__btn" id="login-btn">
             <i class="fas fa-sign-out-alt login-form__btn-icon"></i>
             <span class="login-form__btn-text">ورود</span>
           </button>
@@ -364,5 +366,10 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font-awesome -->
     <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <!--  Login Module JS-->
+    <script src="js/login.js" type="module"></script>
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <!--  shared-->
+    <script type="module" src="./js/shared.js"></script>
   </body>
 </html>

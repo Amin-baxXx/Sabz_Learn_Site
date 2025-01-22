@@ -87,7 +87,7 @@ const getMe = async () => {
   }
   const res = await fetch(`http://localhost:4000/v1/auth/me`, {
     headers: {
-      authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,
     },
   });
   const data = await res.json();

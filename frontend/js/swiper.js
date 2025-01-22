@@ -3,6 +3,7 @@ const swiper = new Swiper(".swiper-container", {
   // Optional parameters
   speed: 800,
   loop: true,
+  spaceBetween: 20,
   breakpoints: {
     576: {
       slidesPerView: 1,

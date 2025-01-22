@@ -2,6 +2,9 @@
 import {
   getAndShowAllCourses,
   getAndShowPopularCourses,
+  getAndShowPresellCourses,
+  getAndShowArticles,
+  getAndShowNavbarMenus,
 } from "./funcs/shared.js";
 
 const $ = document;
@@ -18,7 +21,10 @@ window.addEventListener("load", () => {
     numWriter(item);
   });
   getAndShowAllCourses();
-  getAndShowPopularCourses().then((data) => console.log(data));
+  getAndShowPopularCourses();
+  getAndShowPresellCourses();
+  getAndShowArticles();
+  getAndShowNavbarMenus().then((data) => console.log(data));
 });
 
 const typewriter = function (text, index) {

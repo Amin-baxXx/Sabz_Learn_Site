@@ -1,5 +1,5 @@
 import { getMe } from "./auth.js";
-import { isLogin, getUrlParam } from "../funcs/utils.js";
+import { isLogin, getUrlParam, getToken } from "../funcs/utils.js";
 let ratingHTML = "";
 const showUserNameInNavbar = () => {
   const navbarProfileBox = document.querySelector(".main-header__profile");
@@ -32,8 +32,8 @@ const getAndShowAllCourses = async () => {
   const coursesContainer = document.querySelector("#courses-container");
   const res = await fetch(`http://localhost:4000/v1/courses`);
   const courses = await res.json();
-
-  courses.slice(1, 7).map((course) => {
+  console.log(courses);
+  courses.slice(0, 6).map((course) => {
     const starsNum = course.courseAverageScore; // تعداد ستاره‌ها
     // اینجا HTML ستاره‌ها رو می‌سازیم
     switch (starsNum) {
@@ -88,14 +88,14 @@ const getAndShowAllCourses = async () => {
       `
              <div class="col-4">
                 <div class="courses-box">
-                  <a href="#"
+                  <a href="course.html?name=${course.shortName}"
                     ><img
                       class="course-box__img"
                       src="http://localhost:4000/courses/covers/${course.cover}"
                       alt=""
                   /></a>
                   <div class="course-box__main">
-                    <a class="course-box__title" href="#"
+                    <a class="course-box__title" href="course.html?name=${course.shortName}"
                       >${course.name}</a
                     >
                     <div class="course-box__rating-teacher">
@@ -323,7 +323,7 @@ const getAndShowNavbarMenus = async () => {
       "beforeend",
       `
     <li class="main-header__item">
-    <a href=category.html?cat=${menu.href} ${console.log(menu.href)} class="main-header__link">${
+    <a href=category.html?cat=${menu.href} class="main-header__link">${
       menu.title
     }
       ${
@@ -540,6 +540,153 @@ const coursesSorting = (array, filterMethod) => {
   return outputArray;
 };
 
+const getCourseDetails = () => {
+  const courseShortName = getUrlParam("name");
+  // Select Elmss From Dom
+  const $ = document;
+  const courseTitleElem = $.querySelector(".course-info__title");
+  const courseLastUpdateElem = $.querySelector(
+    ".course-boxes__box-left--last-update",
+  );
+  const courseSupportElem = $.querySelector(".course-boxes__box-left-support");
+  const courseStudentsCountElem = $.querySelector(
+    ".course-info__total-sale-number",
+  );
+  const courseDescriptionElem = $.querySelector(".course-info__text");
+  const courseCategoryElem = $.querySelector(".course-info__link");
+  const courseStatusElem = $.querySelector(".course-boxes__box-left-subtitle");
+  const courseCommentsCountElem = $.querySelector(
+    ".course-info__total-comment-text",
+  );
+  const courseRegisterInfoElem = $.querySelector(
+    ".course-info__register-title",
+  );
+
+  fetch(`http://localhost:4000/v1/courses/${courseShortName}`, {
+    method: "Get",
+    headers: {
+      Authorization: `Bearer ${getToken()}`,
+    },
+  })
+    .then((res) => res.json())
+    .then((course) => {
+      console.log(course);
+      courseCategoryElem.textContent = course.categoryID.title;
+      courseTitleElem.textContent = course.name;
+      courseDescriptionElem.textContent = course.description;
+      courseRegisterInfoElem.insertAdjacentHTML(
+        "beforeend",
+        ` ${course.isUserRegisteredToThisCourse ? "دانشجوی دوره هستید" : "ثبت نام در دوره"}
+      `,
+        (courseStatusElem.textContent = course.isComplete
+          ? "تکمیل شده"
+          : "در حال برگزاری"),
+      );
+      courseSupportElem.textContent = course.support;
+      courseLastUpdateElem.textContent = course.updatedAt.slice(0, 10);
+      courseCommentsCountElem.textContent = ` ${course.comments.length}دیدگاه`;
+      courseStudentsCountElem.textContent = course.courseStudentsCount;
+      //   Show Course sessions
+      const sessionsWrapper = $.querySelector(".sessions-wrapper");
+
+      if (course.sessions.length) {
+        course.sessions.forEach((session, index) => {
+          sessionsWrapper.insertAdjacentHTML(
+            "beforeend",
+            `
+              <div class="accordion-body introduction__accordion-body">
+                <div class="introduction__accordion-right">
+                  <span class="introduction__accordion-count">${
+                    index + 1
+                  }</span>
+                  <i class="fab fa-youtube introduction__accordion-icon"></i>
+                  ${
+                    session.free || course.isUserRegisteredToThisCourse
+                      ? `
+                        <a href="#" class="introduction__accordion-link">
+                          ${session.title}
+                        </a>
+                    `
+                      : `
+                        <span class="introduction__accordion-link">
+                          ${session.title}
+                        </span>
+               
+                    `
+                  }
+                  </div>
+                <div class="introduction__accordion-left">
+                  <span class="introduction__accordion-time">
+                    ${session.time}
+                  </span>
+                  ${
+                    !(session.free || course.isUserRegisteredToThisCourse)
+                      ? `
+                      <i class="fa-solid fa-lock"></i>
+                    `
+                      : ""
+                  }
+                </div>
+              </div>
+          `,
+          );
+        });
+      } else {
+        sessionsWrapper.insertAdjacentHTML(
+          "beforeend",
+          `
+              <div class="accordion-body introduction__accordion-body">
+                <div class="introduction__accordion-right">
+                  <span class="introduction__accordion-count"> -- </span>
+                  <i class="fab fa-youtube introduction__accordion-icon"></i>
+                  <a href="#" class="introduction__accordion-link">
+                    هنوز جلسه‌ای آپلود نشده
+                  </a>
+                </div>
+                <div class="introduction__accordion-left">
+                  <span class="introduction__accordion-time">
+                    00:00
+                  </span>
+                </div>
+              </div>
+          `,
+        );
+      }
+    });
+};
+const getAndShowRelatedCourses = async () => {
+  const courseShortName = getUrlParam("name");
+
+  const courseRelatedCoursesWrapper = document.querySelector(
+    ".course-info__courses-list",
+  );
+
+  const res = await fetch(
+    `http://localhost:4000/v1/courses/related/${courseShortName}`,
+  );
+  const relatedCourses = await res.json();
+
+  if (relatedCourses.length) {
+    relatedCourses.forEach((course) => {
+      courseRelatedCoursesWrapper.insertAdjacentHTML(
+        "beforeend",
+        `
+          <li class="course-info__courses-list-item">
+            <a href="course.html?name=${course.shortName}" class="course-info__courses-link">
+              <img src="http://localhost:4000/courses/covers/${course.cover}" alt="Course Cover" class="course-info__courses-img">
+              <span class="course-info__courses-text">
+                ${course.name}
+              </span>
+            </a>
+        </li>
+      `,
+      );
+    });
+  } else {
+  }
+
+  return relatedCourses;
+};
 export {
   showUserNameInNavbar,
   renderTopbarMenus,
@@ -551,4 +698,6 @@ export {
   getAndShowCategoryCourses,
   insertCourseBoxHtmlTemplate,
   coursesSorting,
+  getCourseDetails,
+  getAndShowRelatedCourses,
 };

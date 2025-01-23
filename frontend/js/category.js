@@ -8,7 +8,6 @@ import { searchInArray } from "./funcs/utils.js";
 window.addEventListener("load", () => {
   // Search Bar Logic
   const coursesSearchInput = document.querySelector(".courses-top-bar__input");
-  // const topBar__searchIcon = document.querySelector(".top-bar__search-icon");
   // end
   getAndShowCategoryCourses().then((responseCourses) => {
     // Add sort

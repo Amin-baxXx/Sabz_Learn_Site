@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
   getAndShowPopularCourses();
   getAndShowPresellCourses();
   getAndShowArticles();
-  getAndShowNavbarMenus().then((data) => console.log(data));
+  getAndShowNavbarMenus();
 });
 
 const typewriter = function (text, index) {

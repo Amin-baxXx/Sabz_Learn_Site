@@ -72,9 +72,12 @@
   border: 1px solid #e5e5e5;
   margin-left: 1rem;
 }
-.course-top-bar__icon--active {
+.courses-top-bar__icon--active {
   color: var(--white-color);
   background-color: #1e83f0;
+}
+.course__box-right-img {
+  width: 25%;
 }
 .courses-top-bar__section {
   transition:

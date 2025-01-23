@@ -3,9 +3,15 @@ import {
   insertCourseBoxHtmlTemplate,
   coursesSorting,
 } from "./funcs/shared.js";
+import { searchInArray } from "./funcs/utils.js";
 
 window.addEventListener("load", () => {
+  // Search Bar Logic
+  const coursesSearchInput = document.querySelector(".courses-top-bar__input");
+  // const topBar__searchIcon = document.querySelector(".top-bar__search-icon");
+  // end
   getAndShowCategoryCourses().then((responseCourses) => {
+    // Add sort
     const coursestopBar__selectionTitle = document.querySelector(
       ".courses-top-bar__selection-title",
     );
@@ -65,6 +71,7 @@ window.addEventListener("load", () => {
       item.addEventListener("click", () => {
         coursestopBar__selectionTitle.textContent = item.textContent;
         // let userFiltringSelection = item.dataset.key;
+        // Add Sort Logic
         let showcourses = coursesSorting([...courses], item.dataset.key);
         insertCourseBoxHtmlTemplate(
           showcourses,
@@ -72,6 +79,32 @@ window.addEventListener("load", () => {
           categoryCoursesWrapper,
         );
       });
+    });
+
+    // Handle Search In  Courses
+    coursesSearchInput.addEventListener("input", (event) => {
+      const showCourses = searchInArray(
+        [...responseCourses],
+        "name",
+        event.target.value,
+      );
+      if (showCourses.length) {
+        categoryCoursesWrapper.innerHTML = "";
+
+        insertCourseBoxHtmlTemplate(
+          showCourses,
+          coursesShowType,
+          categoryCoursesWrapper,
+        );
+      } else {
+        categoryCoursesWrapper.innerHTML = "";
+        categoryCoursesWrapper.insertAdjacentHTML(
+          "beforeend",
+          `
+              <div class="alert alert-danger">هیچ دوره‌ای برای جست و جوی شما وجود ندارد :/</div>
+            `,
+        );
+      }
     });
   });
 });

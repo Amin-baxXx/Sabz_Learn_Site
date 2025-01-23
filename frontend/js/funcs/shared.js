@@ -353,7 +353,6 @@ const getAndShowNavbarMenus = async () => {
 };
 const getAndShowCategoryCourses = async () => {
   const categoryName = getUrlParam("cat");
-
   const res = await fetch(
     `http://localhost:4000/v1/courses/category${categoryName}`,
   );

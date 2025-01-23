@@ -362,7 +362,6 @@ const getAndShowCategoryCourses = async () => {
 };
 const insertCourseBoxHtmlTemplate = (courses, showType, parentElement) => {
   parentElement.innerHTML = "";
-
   if (showType === "row") {
     courses.forEach((course) => {
       parentElement.insertAdjacentHTML(
@@ -508,6 +507,39 @@ const insertCourseBoxHtmlTemplate = (courses, showType, parentElement) => {
     });
   }
 };
+const coursesSorting = (array, filterMethod) => {
+  let outputArray = [];
+  switch (filterMethod) {
+    case "free":
+      {
+        outputArray = array.filter((course) => course.price === 0);
+      }
+      break;
+    case "money":
+      {
+        outputArray = array.filter((course) => course.price > 0);
+      }
+      break;
+    case "first":
+      {
+        outputArray = [...array].reverse();
+      }
+      break;
+    case "last":
+      {
+        outputArray = array;
+      }
+      break;
+    case "default": {
+      outputArray = array;
+    }
+    default: {
+      outputArray = array;
+    }
+  }
+
+  return outputArray;
+};
 
 export {
   showUserNameInNavbar,
@@ -519,4 +551,5 @@ export {
   getAndShowNavbarMenus,
   getAndShowCategoryCourses,
   insertCourseBoxHtmlTemplate,
+  coursesSorting,
 };

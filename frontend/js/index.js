@@ -5,9 +5,13 @@ import {
   getAndShowPresellCourses,
   getAndShowArticles,
   getAndShowNavbarMenus,
+  globalSearch,
 } from "./funcs/shared.js";
+// Global Search
 
 const $ = document;
+const globalSearchBtn = $.getElementById("search-btn");
+const globalSearchInput = $.getElementById("search-input");
 const landing__title = $.querySelector(".landing__title");
 const landingstatus__count = $.querySelectorAll(".landing-status__count");
 // Load function
@@ -26,7 +30,11 @@ window.addEventListener("load", () => {
   getAndShowArticles();
   getAndShowNavbarMenus();
 });
-
+// Global Search
+globalSearchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  location.href = `search.html?value=${globalSearchInput.value.trim()}`;
+});
 const typewriter = function (text, index) {
   if (text.length > index) {
     landing__title.textContent += text[index];

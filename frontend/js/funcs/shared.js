@@ -560,6 +560,8 @@ const getCourseDetails = () => {
   const courseRegisterInfoElem = $.querySelector(
     ".course-info__register-title",
   );
+  // Comments Selection
+  const commentsContentWrapper = $.querySelector(".comments__content");
 
   fetch(`http://localhost:4000/v1/courses/${courseShortName}`, {
     method: "Get",
@@ -648,6 +650,72 @@ const getCourseDetails = () => {
                   </span>
                 </div>
               </div>
+          `,
+        );
+      }
+      //   Show Course Commnets
+      if (course.comments.length) {
+        course.comments.forEach((comment) => {
+          commentsContentWrapper.insertAdjacentHTML(
+            "beforeend",
+            `
+            <div class="comments__item">
+              <div class="comments__question">
+                  <div class="comments__question-header">
+                      <div class="comments__question-header-right">
+                          <span class="comments__question-name comment-name">${comment.creator.name}</span>
+                          <span class="comments__question-status comment-status">
+                          (${comment.creator.role === "USER" ? "دانشجو" : "مدرس"})
+                              </span>
+                          <span class="comments__question-date comment-date">${comment.createdAt.slice(0, 10)}</span>
+                      </div>
+                      <div class="comments__question-header-left">
+                          <a class="comments__question-header-link comment-link" href="#">پاسخ</a>
+                      </div>
+                  </div>
+                  <div class="comments__question-text">
+                     
+                      <p class="comments__question-paragraph comment-paragraph">
+                        ${comment.body}
+                      </p>
+                  </div>
+              </div>
+              ${
+                comment.answerContent
+                  ? `
+                    <div class="comments__ansewr">
+                        <div class="comments__ansewr-header">
+                            <div class="comments__ansewr-header-right">
+                                <span class="comments__ansewr-name comment-name">
+                               ${comment.answerContent.creator.name}
+                                    </span>
+                                <span class="comments__ansewr-staus comment-status">
+                                  (${comment.creator.role === "USER" ? "دانشجو" : "مدرس"})
+                                </span>
+                                <span class="comments__ansewr-date comment-date">1401/04/21</span>
+                            </div>
+                            <div class="comments__ansewr-header-left">
+                                <a class="comments__ansewr-header-link comment-link" href="#">پاسخ</a>
+                            </div>
+                        </div>
+                        <div class="comments__ansewr-text">
+                            <p class="comments__ansewr-paragraph comment-paragraph">
+                              ${comment.answerContent.body}
+                            </p>
+                        </div>
+                    </div>
+                  `
+                  : ""
+              }
+            </div>
+        `,
+          );
+        });
+      } else {
+        commentsContentWrapper.insertAdjacentHTML(
+          "beforeend",
+          `
+           <div class="alert alert-danger">هنوز هیچ نظری برای این دوره ثبت نشده </div>
           `,
         );
       }
@@ -787,6 +855,122 @@ const createNewNewsLetter = async () => {
     );
   }
 };
+const globalSearch = async () => {
+  const searchValue = getUrlParam("value");
+  const coursesSearchResultWrapper =
+    document.querySelector("#courses-container");
+  const articlesSearchResultWrapper =
+    document.querySelector("#articles-wrapper");
+
+  const res = await fetch(`http://localhost:4000/v1/search/${searchValue}`, {});
+  const data = await res.json();
+  if (data.allResultCourses.length > 0) {
+    data.allResultCourses.forEach((course) => {
+      coursesSearchResultWrapper.insertAdjacentHTML(
+        "beforeend",
+        `               <div class="col-4">
+                <div class="courses-box">
+                  <a href="course.html?name=${course.shortName}"
+                    ><img
+                      class="course-box__img"
+                      src="http://localhost:4000/courses/covers/${course.cover}"
+                      alt=""
+                  /></a>
+                  <div class="course-box__main">
+                    <a class="course-box__title" href="course.html?name=${course.shortName}"
+                      >${course.name}</a
+                    >
+                    <div class="course-box__rating-teacher">
+                      <div class="course-box__teacher">
+                        <i
+                          class="fas fa-chalkboard-teacher course-box__teacher-icon"
+                        ></i>
+                        <a class="course-box__teacher-link" href="#"
+                          >امین موحدی راد</a
+                        >
+                      </div>
+                      <div class="course-box__rating">
+                                   <div class="course-box__rating">
+                        <img src="images/svgs/star_fill.svg" alt="rating" class="course-box__star">
+                        <img src="images/svgs/star_fill.svg" alt="rating" class="course-box__star">
+                        <img src="images/svgs/star_fill.svg" alt="rating" class="course-box__star">
+                        <img src="images/svgs/star_fill.svg" alt="rating" class="course-box__star">
+                        <img src="images/svgs/star_fill.svg" alt="rating" class="course-box__star">
+
+                  </div>
+
+                      </div>
+                    </div>
+                    <div class="course-box__status">
+                      <div class="course-box__users">
+                        <i class="fas fa-users course-box__users"> </i>
+                        <span class="course-box__users-test">${Math.floor(Math.random() * 1000)}</span>
+                      </div>
+                      <span class="course-box__price">${course.price > 0 ? course.price.toLocaleString("fa-IR") : "رایگان"}</span>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="course-box__footer">
+                    <a class="course-box__footer-link" href="#"
+                      >مشاهده دوره
+                      <i class="fas fa-arrow-left course-box__footer-icon"></i
+                    ></a>
+                  </div>
+                </div>
+              </div>`,
+      );
+    });
+  } else {
+    coursesSearchResultWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
+                     <div class="alert alert-danger">هیچ دوره ای برای جست جوی شما یافت نشد</div>
+
+          `,
+    );
+  }
+  if (data.allResultArticles.length > 0) {
+    data.allResultArticles.forEach((article) => {
+      articlesSearchResultWrapper.insertAdjacentHTML(
+        "beforeend",
+        `
+              <div class="col-4">
+              <div class="article-card">
+                <div class="article-card__header">
+                  <a href="#" class="article-card__link-img">
+                    <img
+                      src="http://localhost:4000/courses/covers/${article.cover}"
+                      class="article-card__img"
+                      alt="Article Cover"
+                    />
+                  </a>
+                </div>
+                <div class="article-card__content">
+                  <a href="#" class="article-card__link">
+                  ${article.title}
+                  </a>
+                  <p class="article-card__text">
+                  ${article.description}
+                  </p>
+                  <a href="#" class="article-card__btn">بیشتر بخوانید</a>
+                </div>
+              </div>
+            </div>
+          `,
+      );
+    });
+  } else {
+    coursesSearchResultWrapper.insertAdjacentHTML(
+      "beforeend",
+      `
+                     <div class="alert alert-danger">هیچ مقاله ای برای جست جوی شما یافت نشد</div>
+
+          `,
+    );
+  }
+
+  return data;
+};
 export {
   showUserNameInNavbar,
   renderTopbarMenus,
@@ -803,4 +987,5 @@ export {
   getSessionsDetails,
   submitContactUsMsg,
   createNewNewsLetter,
+  globalSearch,
 };

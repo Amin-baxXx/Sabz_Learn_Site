@@ -1,5 +1,5 @@
 import { getMe } from "./auth.js";
-import { isLogin, getUrlParam, getToken } from "../funcs/utils.js";
+import { isLogin, getUrlParam, getToken, showSwal } from "../funcs/utils.js";
 let ratingHTML = "";
 const showUserNameInNavbar = () => {
   const navbarProfileBox = document.querySelector(".main-header__profile");
@@ -539,7 +539,6 @@ const coursesSorting = (array, filterMethod) => {
 
   return outputArray;
 };
-
 const getCourseDetails = () => {
   const courseShortName = getUrlParam("name");
   // Select Elmss From Dom
@@ -603,7 +602,7 @@ const getCourseDetails = () => {
                   ${
                     session.free || course.isUserRegisteredToThisCourse
                       ? `
-                        <a href="#" class="introduction__accordion-link">
+                        <a href="episode.html?name=${course.shortName}&id=${session._id}" class="introduction__accordion-link">
                           ${session.title}
                         </a>
                     `
@@ -687,6 +686,107 @@ const getAndShowRelatedCourses = async () => {
 
   return relatedCourses;
 };
+const getSessionsDetails = async () => {
+  //   Episode Selection
+  const sessionVidoeElem = document.querySelector(".episode-content__video");
+  const courseSessionsListElem = document.querySelector(
+    ".sidebar-topics__list",
+  );
+  const courseShortName = getUrlParam("name");
+  const sessionID = getUrlParam("id");
+  const res = await fetch(
+    `http://localhost:4000/v1/courses/${courseShortName}/${sessionID}`,
+    {
+      headers: {
+        Authorization: `Bearer ${getToken()}`,
+      },
+    },
+  );
+  const responseData = await res.json();
+  sessionVidoeElem.setAttribute(
+    "src",
+    `http://localhost:4000/courses/covers/${responseData.session.video}`,
+  );
+  responseData.sessions.forEach((session) => {
+    courseSessionsListElem.insertAdjacentHTML(
+      "beforeend",
+      `
+            <li class="sidebar-topics__list-item">
+            <div class="sidebar-topics__list-right">
+            <i class="svg-inline--fa fa-circle-play sidebar-topics__list-item-icon"></i>
+            ${
+              session.free
+                ? `            <a class="sidebar-topics__list-item-link" href="episode.html?name${courseShortName}&id=${sessionID}">${session.title}</a>
+`
+                : `            <span class="sidebar-topics__list-item-link">${session.title}</span>
+`
+            }
+            
+</div>
+        <div class="sidebar-topics__list-left">
+        <span class="sidebar-topics__list-item-time">${session.time}</span>
+</div>
+</li>
+            `,
+    );
+  });
+  return responseData;
+};
+const submitContactUsMsg = async () => {
+  const nameInputElem = document.querySelector("#name");
+  const emailInputElem = document.querySelector("#email");
+  const phoneInputElem = document.querySelector("#phone");
+  const bodyInputElem = document.querySelector("#body");
+  const newContactUsInfos = {
+    name: nameInputElem.value.trim(),
+    email: emailInputElem.value.trim(),
+    phone: phoneInputElem.value.trim(),
+    body: bodyInputElem.value.trim(),
+  };
+  const res = await fetch("http://localhost:4000/v1/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newContactUsInfos),
+  });
+  if (res.status === 201) {
+    showSwal("پیغامتان با موفقیت دریافت شد😉", "success", "ورود به پنل", () => {
+      location.href = "index.html";
+    });
+  } else {
+    showSwal(
+      " مشکلی در ارسال پیام وجود دارد😢 \nلطفا بعدا تست کنید",
+      "error",
+      "ناراحت شدم",
+    );
+  }
+
+  return res;
+};
+const createNewNewsLetter = async () => {
+  const newsLetterInput = document.querySelector("#news-letter-input");
+  const newNewsLetterEmailObj = {
+    email: newsLetterInput.value.trim(),
+  };
+
+  const res = await fetch(`http://localhost:4000/v1/newsletters`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newNewsLetterEmailObj),
+  });
+
+  if (res.ok) {
+    showSwal(
+      "با موفقیت در خبرنامه سبزلرن عضو شدید",
+      "success",
+      "متوجه شدم",
+      () => {},
+    );
+  }
+};
 export {
   showUserNameInNavbar,
   renderTopbarMenus,
@@ -700,4 +800,7 @@ export {
   coursesSorting,
   getCourseDetails,
   getAndShowRelatedCourses,
+  getSessionsDetails,
+  submitContactUsMsg,
+  createNewNewsLetter,
 };

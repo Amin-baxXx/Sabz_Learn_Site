@@ -359,7 +359,11 @@ const getAndShowCategoryCourses = async () => {
   const courses = await res.json();
   return courses;
 };
-const insertCourseBoxHtmlTemplate = (courses, showType, parentElement) => {
+const insertCourseBoxHtmlTemplate = (
+  courses,
+  showType = "row",
+  parentElement,
+) => {
   parentElement.innerHTML = "";
   if (showType === "row") {
     courses.forEach((course) => {
@@ -1004,6 +1008,12 @@ const submitComment = async () => {
     );
   }
 };
+const getAllCourses = async () => {
+  const res = await fetch(`http://localhost:4000/v1/courses`, {});
+  const courses = await res.json();
+  console.log(courses);
+  return courses;
+};
 export {
   showUserNameInNavbar,
   renderTopbarMenus,
@@ -1022,4 +1032,5 @@ export {
   createNewNewsLetter,
   globalSearch,
   submitComment,
+  getAllCourses,
 };

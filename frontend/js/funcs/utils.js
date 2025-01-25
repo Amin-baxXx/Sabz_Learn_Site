@@ -29,6 +29,7 @@ const searchInArray = (array, searchProperty, searchValue) => {
   });
   return outputArray;
 };
+
 export {
   showSwal,
   saveIntoLocalStorage,

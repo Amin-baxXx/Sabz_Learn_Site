@@ -584,11 +584,15 @@
                 <div class="comments__respond">
                   <div class="comments__score">
                     <span class="comments__score-title">امتیاز شما</span>
-                    <div class="comments__score-input">
-                      <span class="comments__score-input-text"
-                        >امتیاز خود را انتخاب کنید</span
-                      >
-                      <i class="fas fa-angle-down comments__input-icon"></i>
+                    <div class="col-12">
+                      <select id="comment-score">
+                        <option value="5">به دوره امتیاز دهید (:</option>
+                        <option value="5">عالی</option>
+                        <option value="4">خیلی خوب</option>
+                        <option value="3">خوب</option>
+                        <option value="2">قابل بد</option>
+                        <option value="1">ضعیف</option>
+                      </select>
                     </div>
                   </div>
                   <div class="comments__respond-content">
@@ -778,8 +782,10 @@
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Font-awesome -->
     <script src="./node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
     <!--  userName-->
     <script type="module" src="js/shared.js"></script>
-    <script type="module" src="js/course.js"></script>
+
+    <script type="module" src="./js/course.js"></script>
   </body>
 </html>

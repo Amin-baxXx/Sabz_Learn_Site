@@ -1,10 +1,17 @@
+"use strict";
+
 import {
   getAndShowCategoryCourses,
   insertCourseBoxHtmlTemplate,
   coursesSorting,
 } from "./funcs/shared.js";
-import { searchInArray } from "./funcs/utils.js";
-
+import {
+  searchInArray,
+  paginateItems,
+  getUrlParam,
+  addParamToUrl,
+} from "./funcs/utils.js";
+window.addParamToUrl = addParamToUrl;
 window.addEventListener("load", () => {
   // Search Bar Logic
   const coursesSearchInput = document.querySelector(".courses-top-bar__input");
@@ -105,5 +112,21 @@ window.addEventListener("load", () => {
         );
       }
     });
+    //   Handle Pagination
+    const coursesPaginationWrapper = document.querySelector(
+      ".courses__pagination-list",
+    );
+    const url = getUrlParam("page");
+    const shownCourses = paginateItems(
+      [...responseCourses],
+      2,
+      coursesPaginationWrapper,
+      url,
+    );
+    insertCourseBoxHtmlTemplate(
+      [...shownCourses],
+      coursesShowType,
+      categoryCoursesWrapper,
+    );
   });
 });
